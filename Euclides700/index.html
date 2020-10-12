@@ -12,15 +12,19 @@
                 document.querySelector("#vid").pause(); //reference to the video
             },
             tick:function(){  
-            if(document.querySelector("a-marker").object3D.visible == true){
-                if(!this.toggle){
-                this.toggle = true;
-                document.querySelector("#vid").play();
+                if(document.querySelector("a-marker").object3D.visible == true)
+                {
+                    if(!this.toggle)
+                    {
+                        this.toggle = true;
+                        document.querySelector("#vid").play();
+                    }
                 }
-            }else{
+            /*else{
                 this.toggle = false;
-                document.querySelector("#vid").pause();
+                //document.querySelector("#vid").pause();
             }
+            */
             }
             });
         </script>
