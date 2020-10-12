@@ -23,13 +23,12 @@
                 this.toggle = false;
                 document.querySelector("#vid").pause();
             }
-            
             }
             });
         </script>
         <a-scene embedded arjs>
               <a-assets>
-                  <video id="vid" autoplay src="assets/video/video.mp4"></a-asset-item>
+                  <video id="vid" src="assets/video/video.mp4"></a-asset-item>
                   <a-asset-item id="arcode" src="assets/marker/marker.patt"></a-asset-item>
               </a-assets>
               <a-marker preset="hiro">
