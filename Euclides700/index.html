@@ -10,6 +10,7 @@
             init: function () {
                 this.toggle = false;
                 document.querySelector("#vid").pause(); //reference to the video
+                console.log('Toggle false');
             },
             tick:function(){  
                 if(document.querySelector("a-marker").object3D.visible == true)
@@ -17,11 +18,13 @@
                    if (!this.toggle) {
                         this.toggle = true;
                         document.querySelector("#vid").play();
+                        console.log('Toggle virou true');
                     }
                 }
             else{
                 this.toggle = false;
                 document.querySelector("#vid").pause();
+                console.log('Toggle virou false');
             }
             }
             });
