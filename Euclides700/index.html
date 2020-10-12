@@ -18,8 +18,8 @@
                 document.querySelector("#vid").play();
                 }
             }else{
-                //this.toggle = false;
-                //document.querySelector("#vid").pause();
+                this.toggle = false;
+                document.querySelector("#vid").pause();
             }
             }
             });
@@ -30,7 +30,7 @@
                   <a-asset-item id="arcode" src="assets/marker/marker.patt"></a-asset-item>
               </a-assets>
               <a-marker vidhandler preset="hiro">
-                <a-video src="#vid" width="8" height="3" position="0 0.2 1" rotation="90 180 0"></a-video>
+                <a-video src="#vid" width="8" height="3" position="0 0.2 0.2" rotation="90 0 0"></a-video>
               </a-marker>
               <a-entity camera></a-entity>
         </a-scene>
