@@ -5,10 +5,13 @@
     <body>
         <a-scene>
             <a-assets>
-                <a-asset-item id="model" src="assets/house/247_House 15_obj.obj"></a-asset-item>
+                <a-asset-item id="model" src="assets/room/room.obj"></a-asset-item>
+                <a-asset-item id="model-mtl" src="assets/room/room.mtl"></a-asset-item>
+                <a-asset-item id="modelz" src="assets/room/untitled.glb"></a-asset-item>
             </a-assets>
-            <a-entity obj-model="obj:#model;" scale="0.1 0.1 0.1"></a-entity>
-            <a-camera position="0 4.6 0"></a-camera>
+            <!--<a-entity obj-model="obj:#model; mtl:#model-mtl;" scale="0.1 0.1 0.1"></a-entity>-->
+            <a-entity gltf-model="#modelz" scale="0.1 0.1 0.1"></a-entity>
+            <a-camera position="70 17.5 -87"></a-camera>
         </a-scene>
     </body>
 </html>
