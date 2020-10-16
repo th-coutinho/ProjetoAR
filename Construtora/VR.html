@@ -9,7 +9,8 @@
     <body>
         <a-scene>
             <a-assets>
-                <a-asset-item id="model" src="assets/room/untitled.glb"></a-asset-item>
+                <a-asset-item id="model" src="assets/quarto/room.obj"></a-asset-item>
+                <a-asset-item id="model-mtl" src="assets/quarto/room.mtl"></a-asset-item>
                 <a-mixin id="progressivecontrolsgazedefault"
                          position="0 0 -0.5" raycaster="objects: .UIbutton"
                          cursor="fuse: true; fuseTimeout: 1000"
@@ -30,9 +31,9 @@
             </a-assets>
             <a-entity progressive-controls></a-entity>
             <!--<a-entity obj-model="obj:#model; mtl:#model-mtl;" scale="0.1 0.1 0.1"></a-entity>-->
-            <a-entity gltf-model="#model" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity obj-model="obj:#model;mtl:#model-mtl;"></a-entity>
             <a-entity movement-controls="speed: 0.15;">
-                <a-entity camera position="70 17.5 -87" look-controls="pointerLockEnabled: true;" >
+                <a-entity camera look-controls="pointerLockEnabled: true;" >
                     <a-cursor></a-cursor>
                 </a-entity>
             </a-entity>
