@@ -8,14 +8,19 @@
     <body>
         <a-scene embedded arjs>
               <a-assets>
-                  <a-asset-item id="iso" src="assets/isometric/scene.gltf"></a-asset-item>
-                  <a-asset-item id="predio" src="assets/build/Apartment.gltf"></a-asset-item>
+                  <a-asset-item id="iso" src="assets/models/isometric/scene.gltf"></a-asset-item>
+                  <a-asset-item id="predio" src="assets/models/build/Apartment.gltf"></a-asset-item>
+                  <a-asset-item id="city" src="assets/models/city/apartment.gltf"></a-asset-item>
+                  <a-asset-item id="marker" src="assets/triggers/pattern-marker.patt"></a-asset-item>
               </a-assets>
               <a-marker preset="hiro">
-                <a-entity gltf-model="#iso"></a-entity>
+                <a-entity gltf-model="#iso" scale="0.01 0.01 0.01"></a-entity>
               </a-marker>
               <a-marker preset="kanji">
-                <a-entity gltf-model="#predio"></a-entity>
+                <a-entity gltf-model="#predio" scale="0.01 0.01 0.01"></a-entity>
+              </a-marker>
+              <a-marker type="pattern" url="#marker">
+                <a-entity gltf-model="#city" scale="0.01 0.01 0.01"></a-entity>
               </a-marker>
               <a-entity camera></a-entity>
         </a-scene>
