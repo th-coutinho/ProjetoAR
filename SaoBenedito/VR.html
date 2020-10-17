@@ -9,18 +9,22 @@
     <body>
         <a-scene>
             <a-assets>
-                <a-asset-item id="model" src="assets/predio/Apartment Building_17_obj.obj"></a-asset-item>
-                <a-asset-item id="model-mtl" src="assets/predio/Apartment Building_17_obj.mtl"></a-asset-item>
-                <a-asset-item id="predio" src="assets/predio/predio.glb"></a-asset-item>
+                <a-asset-item id="model" src="assets/casa/House.obj"></a-asset-item>
+                <a-asset-item id="model-mtl" src="assets/casa/House.mtl"></a-asset-item>
+                <a-asset-item id="obj" src="assets/cozinha/kitchen_vr_glb.glb"></a-asset-item>
+                <img id="tex" src="assets/cozinha/varanda.png">
             </a-assets>
-            <a-camera position="0 1.6 10"></a-camera>
+            <!--<a-camera position="0 1.6 0"></a-camera>-->
             <a-entity movement-controls="speed: 0.15" position="0 0 0">
                 <a-camera camera position="0 1.6 0" look-controls="pointerLockEnabled: true;">
                     <a-cursor position="0 0 -1">
                     </a-cursor>
                 </a-camera>
             </a-entity>
-            <a-entity gltf-model="#predio" position="0 0.1 0" scale="0.025 0.025 0.025"></a-entity>
+            <a-entity gltf-model="#obj" position="5 0.1 9.4" scale="1 1 1">
+                <a-plane src="#tex" rotation="0 90 0" position="-7.20008 1.35512 -9.40479" material="" geometry="" scale="4.83 2.95 1.44"></a-plane>
+            </a-entity>
+            
             <a-plane color="#00FF00" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane>
         </a-scene>
     </body>
