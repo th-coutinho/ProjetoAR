@@ -8,10 +8,14 @@
     <body>
         <a-scene embedded arjs>
               <a-assets>
-                  <a-asset-item id="model" src="assets/models/scene_2.glb"></a-asset-item>
+                  <a-asset-item id="model" src="assets/models/scene.glb"></a-asset-item>
               </a-assets>
               <a-marker preset="hiro">
-                <a-entity gltf-model="#model" scale="0.001 0.001 0.001" rotation="0 0 0"></a-entity>
+                <a-entity 
+                    gltf-model="#model" 
+                    scale="0.001 0.001 0.001" 
+                    rotation="0 0 0"
+                    light="type: ambient;intensity: 1"></a-entity>
               </a-marker>
               <a-entity camera></a-entity>
         </a-scene>
